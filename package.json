@@ -16,6 +16,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "author": {"name": "Gergely Gazda"},
+  "author": {
+    "name": "Gergely Gazda"
+  },
   "license": "MIT"
 }
