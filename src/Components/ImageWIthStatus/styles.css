@@ -18,16 +18,3 @@
   display: block;
 }
 
-@media (min-aspect-ratio: 8919/6683) {
-  .image-with-status img {
-    max-width: 100%;
-    min-height: 100%;
-  }
-}
-
-@media (max-aspect-ratio: 8919/6683) {
-  .image-with-status img {
-    max-height: 100%;
-    width: auto;
-  }
-}
