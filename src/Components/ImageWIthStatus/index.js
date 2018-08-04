@@ -18,39 +18,10 @@ class ImageWithStatus extends Component {
     this.props.onLoad();
   }
 
-
-  style = () => {
-    const { innerWidth, innerHeight } = window;
-    const { width, height } = this.state;
-
-    if (innerHeight / innerWidth > height / width) {
-      return {
-        image: {
-          maxHeight: '100%',
-          width: 'auto'
-        }        
-      }
-    }
-    return {
-      image: {
-        maxWidth: '100%',
-        minHeight: '100%'
-      }      
-    }
-  }
-
   render() {
-    const { src, onError, alt } = this.props;
-    return (
-      
+    return ({ src, onLoad, onError, alt }) => (
       <div className="image-with-status">
-        <img
-          alt={alt}
-          src={src}
-          style={this.style().image}
-          onLoad={this.handleLoad}
-          onError={onError}
-        />
+        <img alt={alt} src={src} onLoad={this.handleLoad} onError={onError} />
       </div>
     );
   }
